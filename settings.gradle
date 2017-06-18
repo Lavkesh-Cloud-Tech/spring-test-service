@@ -1,3 +1,1 @@
 rootProject.name = 'spring-test-service'
-include ':cloud-model'
-project(':cloud-model').projectDir = new File(settingsDir, '../cloud-model')

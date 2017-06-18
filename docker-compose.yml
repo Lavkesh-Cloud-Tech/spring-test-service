@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  test-service:
+    image: "${IMAGE_NAME}:${IMAGE_VERSION}"
+    ports:
+      - "8080"
+      - "9080"
+    environment:
+      - SPRING_PROFILES_ACTIVE
+      - RABBITMQ_USERNAME
+      - RABBITMQ_PASSWORD
+      - REGISTRY_USERNAME
+      - REGISTRY_PASSWORD
+
+networks:
+  default:
+    external:
+      name: my-first-bridge-network
