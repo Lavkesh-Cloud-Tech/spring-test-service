@@ -1,6 +1,3 @@
-server:
-  port: 8080
-  
 spring:
   application:
     name: test-service
@@ -12,11 +9,8 @@ spring:
         service-id: config-server
         enabled: true
       label: ${CONFIG_LABEL:master}
-  rabbitmq:
-    host: rabbitmq-service
-    port: 5672
-    username: ${RABBITMQ_USERNAME}
-    password: ${RABBITMQ_PASSWORD}
+      name: application
+      profile: ${spring.application.name}
           
 eureka:
   instance:
@@ -32,4 +26,4 @@ management:
 
 endpoints:
   enabled: false
-  sensitive: true 
+  sensitive: true
